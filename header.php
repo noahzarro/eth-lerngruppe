@@ -1,26 +1,34 @@
-<nav  class="nav nav-tabs">
-  <?php
-    $string = file_get_contents("./nav.json");
-    $json_a = json_decode($string);
-    foreach ($json_a as $file) {
-      // create link
-      echo '<a href="'.$file[0].'.php" class="nav-item nav-link';
-      if ($current_file ==$file[0]){
-        echo ' active';
-      }
-      echo '">';
+<nav  class="navbar navbar-expand-md navbar-light bg-light">
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-      // display link content
-      // display icon
-      echo '<i class="fa fa-';
-      echo $file[2];
-      echo '"></i>';
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav">
+      <?php
+        $string = file_get_contents("./nav.json");
+        $json_a = json_decode($string);
+        foreach ($json_a as $file) {
+          // create link
+          echo '<a href="'.$file[0].'.php" class="nav-item nav-link';
+          if ($current_file ==$file[0]){
+            echo ' active';
+          }
+          echo '">';
 
-      // display page name
-      echo $file[1];
+          // display link content
+          // display icon
+          echo '<i class="';
+          echo $file[2];
+          echo '"></i>';
 
-      // end link
-      echo "</a>";
-    }
-    ?>
+          // display page name
+          echo $file[1];
+
+          // end link
+          echo "</a>";
+        }
+        ?>
+    </div>
+  </div>
 </nav>

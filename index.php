@@ -18,7 +18,7 @@
   <!-- Navigation -->
   <?php
     $current_file = basename(__FILE__, '.php');
-    //include 'header.php';
+    include 'header.php';
   ?>
   <div class="container">
     <div class="row">

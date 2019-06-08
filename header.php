@@ -1,4 +1,4 @@
-<nav  class="navbar navbar-expand-md navbar-light bg-light">
+<nav  class="navbar navbar-expand-md navbar-light bg-light blue lighten-3">
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,7 +20,7 @@
           // display icon
           echo '<i class="';
           echo $file[2];
-          echo '"></i>';
+          echo '"></i> ';
 
           // display page name
           echo $file[1];
